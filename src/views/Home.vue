@@ -1,18 +1,14 @@
+<script setup lang="ts">
+import PostGroup from "@/components/post/PostGroup.vue";
+</script>
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div id="home">
+    <PostGroup />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-export default defineComponent({
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
-});
-</script>
+<style lang="scss" scoped>
+#home {
+  //
+}
+</style>
