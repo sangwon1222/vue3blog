@@ -19,7 +19,6 @@ onMounted(() => {
 });
 
 const keyDownEnter = (e) => {
-  console.log(e.key);
   e.key === "Enter" && submitSignUp(), false;
 };
 
@@ -43,26 +42,28 @@ const submitSignUp = async () => {
   if (duplicateCheck(email, guideText.email) === false) return;
   if (duplicateCheck(tel, guideText.tel) === false) return;
   const userInfo = {
-    username: id,
-    password: pw,
-    email: email,
-    telNo: tel,
+    username: id.value,
+    password: pw.value,
+    email: email.value,
+    telNo: tel.value,
   };
 
-  try {
-    await axios({
-      method: "post",
-      url: "api/user",
-      data: userInfo,
+  await axios({
+    method: "post",
+    url: "api/user",
+    data: userInfo,
+  })
+    .then((response) => {
+      console.log(response);
+      router.push({ name: "Login" });
+    })
+    .catch((error) => {
+      console.log(userInfo);
+      console.groupCollapsed("axios error");
+      console.group(error);
+      console.groupEnd();
+      alert("정확한 형식으로 적어주세요.");
     });
-    router.push({ name: "Login" });
-  } catch (error) {
-    console.groupCollapsed("axios error");
-    console.group(error);
-    console.groupEnd();
-
-    router.push({ name: "Home" });
-  }
 };
 </script>
 

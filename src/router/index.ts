@@ -7,6 +7,7 @@ import SignUp from "../views/SignUp.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
+    // path: "/blog_vue",
     name: "Home",
     component: Home,
   },

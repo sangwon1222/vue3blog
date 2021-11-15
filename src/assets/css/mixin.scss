@@ -2,6 +2,27 @@ $main_color: #6084ab;
 $sub_color: #35495e;
 $green_color: #41b883;
 
+.wrap {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.basic-btn {
+  display: inline-block;
+  padding: 1rem;
+  background-color: $green_color;
+  color: $sub_color;
+  border-radius: 1rem;
+  cursor: pointer;
+  &:active {
+    animation: bound forwards 0.5s;
+  }
+}
+
+.left1 {
+  margin-left: 2rem;
+}
+
 .top1 {
   margin-top: 2rem;
 }
@@ -65,5 +86,14 @@ $green_color: #41b883;
 @keyframes moveCenter {
   from {
     margin-left: -100%;
+  }
+}
+
+@keyframes bound {
+  50% {
+    transform: scale(90%);
+  }
+  100% {
+    transform: scale(100%);
   }
 }

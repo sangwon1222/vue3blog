@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div id=""></div>
+  <div id="myPost">글이 없습니다.</div>
 </template>
 
 <style lang="scss" scoped>

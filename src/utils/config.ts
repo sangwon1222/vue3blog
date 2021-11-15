@@ -13,6 +13,9 @@ export default {
       login_guide: "계정이 이미 있으신가요?",
       socialText: "소셜 계정으로 로그인",
       search: "검색",
+      noGreeting: "인사말이 없습니다",
+      writeGreeting: "인사말 작성하기",
+      editGreeting: "인사말 수정하기",
     },
     en: {
       id: "ID",
@@ -26,6 +29,9 @@ export default {
       login_guide: "Already have an account?",
       socialText: "Log in with your social account",
       search: "search",
+      noGreeting: "No greetings",
+      writeGreeting: "Write a greeting",
+      editGreeting: "Edit your greeting",
     },
   },
 

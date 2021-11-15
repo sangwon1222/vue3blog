@@ -77,7 +77,7 @@ const mobileSearch = () => {
   <div id="header">
     <Search v-if="mobileflag" @close="closeSearch" />
 
-    <div class="header-wrap">
+    <div class="header-wrap wrap">
       <!-- 로고 -->
       <div @click="resetList">
         <router-link class="logo-wrap" :to="{ name: 'Home' }">
@@ -99,7 +99,7 @@ const mobileSearch = () => {
       </div>
     </div>
 
-    <div class="pc-search">
+    <div class="pc-search wrap">
       <input type="text" placeholder="검색어를 작성해주세요." />
       <button class="search" @click="resetPcList">
         {{ guide?.search }}
@@ -121,8 +121,6 @@ const mobileSearch = () => {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    margin: 0 auto;
-    max-width: 1400px;
     .logo-wrap {
       overflow: hidden;
       display: flex;
@@ -241,7 +239,6 @@ const mobileSearch = () => {
       overflow: hidden;
       display: block;
       margin: 0 auto;
-      max-width: 1200px;
       height: 0;
       white-space: wrap;
       > input {

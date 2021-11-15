@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 <template>
   <div id="post-group">
-    <div class="post-wrap">
+    <div class="post-wrap wrap">
       <div v-for="(v, i) in data" :key="i" class="post">
         <Post
           :img="v.img"
@@ -34,7 +34,6 @@ onMounted(() => {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1400px;
     width: 100%;
     box-sizing: border-box;
     .post {

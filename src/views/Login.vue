@@ -51,17 +51,17 @@ const submitLogin = async () => {
       headers: { "Cache-Control": "no-cache" },
       data: userInfo,
     });
+    console.log(token);
     localStorage.setItem("token", token.headers.authorization);
+    localStorage.setItem("id", userInfo.username);
     router.push({ name: "MyPage" });
   } catch (error) {
-    router.push({ name: "SignUp" });
-
-    console.groupCollapsed(`axios error`);
-    console.group(error);
-    console.groupEnd();
+    // console.groupCollapsed(`axios error`);
+    // console.group(error);
+    // console.groupEnd();
 
     alert("아직 회원이 아닙니다!");
-    console.log(router);
+    router.push({ name: "SignUp" });
   }
 };
 </script>

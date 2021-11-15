@@ -5,6 +5,9 @@ import Header from "@/components/header/Header.vue";
   <div id="app">
     <Header />
     <router-view />
+    <!-- <a id="git" href="https://github.com/sangwon1222/vue3blog"
+      >https://github.com/sangwon1222/vue3blog</a
+    > -->
   </div>
 </template>
 
@@ -12,5 +15,12 @@ import Header from "@/components/header/Header.vue";
 #app {
   padding-top: 100px;
   text-align: center;
+}
+#git {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #000;
 }
 </style>
